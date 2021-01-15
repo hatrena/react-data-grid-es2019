@@ -135,6 +135,8 @@ export interface DataGridProps<R, K extends keyof R, SR = unknown> {
   /** called before cell is set active, returns a boolean to determine whether cell is editable */
   onCheckCellIsEditable?: (event: CheckCellIsEditableEvent<R, SR>) => boolean;
 
+  rowClass?: string;
+
   /**
    * Toggles and modes
    */
@@ -178,6 +180,7 @@ function DataGrid<R, K extends keyof R, SR>({
   columns: rawColumns,
   rows,
   rowRenderer,
+  rowClass,
   rowGroupRenderer,
   summaryRows,
   selectedRows,
@@ -396,6 +399,7 @@ function DataGrid<R, K extends keyof R, SR>({
           eventBus={eventBus}
           rowGroupRenderer={rowGroupRenderer}
           rowRenderer={rowRenderer}
+          rowClass={rowClass}
           isRowSelected={isRowSelected}
           onRowClick={onRowClick}
           onRowExpandToggle={onRowExpandToggle}

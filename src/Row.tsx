@@ -14,6 +14,7 @@ export default function Row<R, SR = unknown>({
   isRowSelected,
   lastFrozenColumnIndex,
   onRowClick,
+  rowClass,
   row,
   viewportColumns,
   onDragEnter,
@@ -36,6 +37,7 @@ export default function Row<R, SR = unknown>({
     'rdg-row',
     `rdg-row-${rowIdx % 2 === 0 ? 'even' : 'odd'}`,
     { 'rdg-row-selected': isRowSelected },
+    rowClass,
     className
   );
 

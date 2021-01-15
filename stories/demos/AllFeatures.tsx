@@ -25,7 +25,7 @@ interface Row {
 
 faker.locale = 'en_GB';
 
-const titles = ['Dr.', 'Mr.', 'Mrs.', 'Miss', 'Ms.'];
+const titles = ['Dr...', 'Mr.', 'Mrs.', 'Miss', 'Ms.'];
 
 function createFakeRowObjectData(index: number): Row {
   return {
@@ -206,6 +206,7 @@ export default function AllFeatures() {
             width={width}
             height={height - 40}
             selectedRows={selectedRows}
+            rowClass="custom_class"
             onSelectedRowsChange={setSelectedRows}
             enableCellCopyPaste
             enableCellDragAndDrop
